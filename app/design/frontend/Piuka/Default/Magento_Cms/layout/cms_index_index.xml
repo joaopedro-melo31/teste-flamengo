@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <referenceContainer name="content">
+            <block class="Magento\Cms\Block\Block" name="home-instagram">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">home-instagram</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="home-reviews">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">home-reviews</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="page.top">
+            <block class="Magento\Cms\Block\Block" name="bottom-message" after="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">bottom-message</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="footer-container">
+            <block class="Magento\Cms\Block\Block" name="footer_menu">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_menu</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <move element="home-instagram" destination="main.content" after="form.subscribe" />
+        <move element="home-reviews" destination="main.content" before="home-instagram" />
+
+    </body>
+</page>

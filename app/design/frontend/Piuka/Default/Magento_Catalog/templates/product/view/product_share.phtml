@@ -1,0 +1,44 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var $block \Magento\Catalog\Block\Product\View */
+$_product = $block->getProduct();
+?>
+<div class="share-container" data-mage-init='{"social-share": {}}'>
+	<strong><?= $block->escapeHtml(__('Share')) ?></strong>
+	<ul>
+		<li>
+			<a class="whatsapp" target="_blank" href="https://api.whatsapp.com/send?text=<?= urlencode($_product->getProductUrl());?>">
+				<img src="<?= $this->getViewFileUrl('images/icon-whats.svg'); ?>" />
+			</a>
+		</li>
+		<li>
+			<a class="instagram" target="_blank" href="https://www.instagram.com/piuka">
+				<img src="<?= $this->getViewFileUrl('images/icon-instagram.svg'); ?>" />
+			</a>
+		</li>
+		<li>
+			<a class="twitter" href="http://twitter.com/home/?status=<?= urlencode($_product->getProductUrl());?>(<?= urlencode($_product->getName())?>)" title="Share on Twitter">
+				<img src="<?= $this->getViewFileUrl('images/icon-twitter.svg'); ?>" />
+			</a>
+		</li>
+		<li>
+			<a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode($_product->getProductUrl());?>&t=<?= urlencode($_product->getName())?>" title="Share on facebook">
+				<img src="<?= $this->getViewFileUrl('images/icon-facebook.svg'); ?>" />
+			</a>
+		</li>
+		<li>
+			<a class="tiktok" href="https://www.tiktok.com/@piuka">
+				<img src="<?= $this->getViewFileUrl('images/icon-tiktok.svg'); ?>" />
+			</a>
+		</li>
+		<li>
+			<a class="tiktok" href="https://br.pinterest.com/piuka">
+				<img src="<?= $this->getViewFileUrl('images/icon-pt.png'); ?>" />
+			</a>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <referenceContainer name="product.info.main">
+            <!-- Add Product sharing block -->
+            <block class="Magento\Catalog\Block\Product\View" name="product.share" template="Magento_Catalog::product/view/product_share.phtml" after="-" />
+        </referenceContainer>
+
+        <referenceContainer name="page.top">
+            <block class="Magento\Cms\Block\Block" name="bottom-message" after="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">bottom-message</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <!-- Move Page title -->
+        <move element="page.main.title" destination="product.info.main" before="-"/>
+
+
+        <!--<referenceContainer name="product.info.details" remove="true" />-->
+        <!--<referenceContainer name="product.info.description.wrapper" remove="true" />-->
+        <referenceBlock name="sale.reorder.sidebar" remove="true"/>
+        <referenceBlock name="product.info.upsell" remove="true"/>
+        <referenceBlock name="form.subscribe" remove="true"/>
+        <referenceBlock name="product.attributes" remove="true" />
+        <!--<referenceBlock name="product.info.details" remove="true" />-->
+
+
+        
+
+        <referenceBlock name="view.addto.compare" remove="true"/>
+
+
+        <move element="reviews.tab" destination="content" after="product.info.details" />
+        <move element="breadcrumbs" destination="content" before="-" />
+        <move element="product.info.stock.sku" destination="page.main.title" after="-" />
+
+        <move element="product.info.review" destination="page.main.title" before="product.info.stock.sku" />
+        <move element="review_view" destination="page.main.title" before="product.info.stock.sku" />
+
+        <move element="catalog.product.related" destination="content" before="mix.options.container"/>
+
+    </body>
+</page>

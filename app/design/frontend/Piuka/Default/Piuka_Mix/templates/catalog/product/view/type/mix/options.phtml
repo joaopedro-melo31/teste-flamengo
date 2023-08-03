@@ -1,0 +1,112 @@
+<?php /** @var Escaper $escaper */
+
+use Magento\Framework\Escaper;
+use Piuka\Mix\Block\Catalog\Product\View\Type\Mix; ?>
+<?php /** @var Mix $block */ ?>
+<?php $product = $block->getProduct(); ?>
+<?php $childMixProducts = $block->getProductsData(); ?>
+
+<?php if ($product->isSaleable() && count($childMixProducts)) : ?>
+    <div class="items-mix-summary"> 
+        <strong><?= __("ITEMS IN THE MIX") ?></strong>
+        <span><?=__('%1 products', count($childMixProducts)) ?></span>
+    </div>
+    <div class="table-wrapper mix">
+        <ul class="table data mix" id="mix-products-table">
+            <?php foreach ($childMixProducts as $childMixProduct): ?>
+                <?php /** @var \Magento\Catalog\Model\Product  $_item */ ?>
+                <?php $_item = $childMixProduct["item"]; ?>
+                <li class="item-info-<?= $childMixProduct["product_id"] ?> <?= $childMixProduct["salable"] ? 'item-selected' : 'item-unselected' ?>">
+                    <div data-th="<?= $escaper->escapeHtml(__('Item')) ?>" class="col item">
+                        <?php $imageData = $childMixProduct["image_data"]; ?>
+                        <span class="product-item-photo">
+                                <img class="product-image-<?= $_item->getId() ?>"
+                                    src="<?= $imageData['src'] ?>" alt="<?= $imageData['alt'] ?>"
+                                     width="<?= $imageData['width'] ?>" height="<?= $imageData['height'] ?>"/>
+                            </span>
+                        <div class="product-item-details">
+                            <h4 class="product-item-name">
+                                <?= $escaper->escapeHtml($childMixProduct["product_name"]) ?>
+                            </h4>
+                            <span class="cod-mix"><?= "Cod: {$childMixProduct['sku']} "?></span>
+                            <?php if ($childMixProduct["salable"]): ?>
+                                <div class="col price mixProduct[<?= $_item->getId() ?>][price]" data-th="<?= $escaper->escapeHtml(__('Price')) ?>">
+                                    <div class="product-info-price-<?= $_item->getId() ?>">
+                                        <div class="price-box-<?= $_item->getId() ?> price-final_price-variations" data-role="priceBox-<?= $_item->getId() ?>" data-product-id="<?= $_item->getId() ?>" data-price-box="product-id-<?= $_item->getId() ?>">
+                                            <span class="normal-price">
+                                                <span class="price-container-variations price-final_price-variations tax weee">
+                                                    <span class="price-label-<?= $_item->getId() ?>" style="display: none"><?= __('As low as') ?></span>
+                                                    <span id="product-price-<?= $_item->getId() ?>"
+                                                          data-price-amount='<?= $childMixProduct["product_price_amount"] ?>'
+                                                          data-price-type="finalPrice"
+                                                          class="price-wrapper-variations">
+                                                        <span class="price-variations">
+                                                            <?= $childMixProduct["product_price"] ?>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php else: ?>
+                                <div class="notify-product-mix" id="stock-notice-elem-grouped-<?php echo $_item->getId()?>" title="<?php /* @escapeNotVerified */ echo __('Notify') ?>"></div>
+                            <?php endif; ?>
+                            <?php $configurableHelper = $this->helper(Piuka\Mix\Helper\ConfigurableData::class); ?>
+                            <?php $configurableSwatchHelper = $this->helper(Piuka\Mix\Helper\ConfigurableSwatchData::class); ?>
+                            <?php $customOptionsHelper = $this->helper(Piuka\Mix\Helper\CustomOptionsHelper::class) ?>
+
+                            <?php $_attributes = $configurableHelper->decorateArray($configurableHelper->getAllowAttributes($_item)); ?>
+                            <?php if ($childMixProduct["salable"] && count($_attributes) > 0): ?>
+                                <?php $jsonData = $configurableHelper->getJsonConfig($_item->getId()) ?>
+                                <?php $jsonSwatchData = $configurableSwatchHelper->getJsonSwatchConfig($_item->getId()) ?>
+                                <div class="mix_configuration[<?= $_item->getId() ?>] mix_configurations-options"
+                                     data-mage-init='{"Piuka_Mix/js/widget/mix-configurable-swatch": {"jsonConfig": <?= $jsonData ?>, "jsonSwatchConfig": <?= $jsonSwatchData ?>, "productId": <?=$_item->getId() ?>}}'
+                                >
+                                    <input type="hidden" name="selected_configurable_option[<?= $_item->getId() ?>]">
+                                </div>
+                            <?php endif; ?>
+
+                            <?php $customOptions = $customOptionsHelper->getCustomOptions($_item->getId()) ?>
+                            <?php if ($customOptions): ?>
+                                <div class="child_mix_custom_options" data-mage-init='{"Piuka_Mix/js/widget/mix-custom-options": {"customOptions": <?= $customOptions ?>, "productId": <?=$_item->getId() ?>}}'>
+                                    <div class="options-product-<?= $_item->getId() ?>"></div>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <?php if ($childMixProduct["salable"]): ?>
+                        <div class="col qty" data-th="<?= $escaper->escapeHtml(__('Qty')) ?>" style="display: none;">
+                            <div class="control qty">
+                                <input type="number"
+                                       name="mixProducts[<?= $escaper->escapeHtmlAttr($childMixProduct["product_id"]) ?>][qty]"
+                                       data-selector="mix[<?= $escaper->escapeHtmlAttr($childMixProduct["product_id"]) ?>][qty]"
+                                       value="1"
+                                       hidden
+                                       title="<?= $escaper->escapeHtmlAttr(__('Qty')) ?>"
+                                       class="input-text qty qty-<?= $childMixProduct["product_id"] ?>"
+                                />
+                                <input type="hidden"
+                                       name="mixProducts[<?= $escaper->escapeHtmlAttr($childMixProduct["product_id"]) ?>][type_id]"
+                                       value="<?= $_item->getTypeId() ?>"
+                                       class="input-text type_id"
+                                />
+                            </div>
+                        </div>
+                        <div class="button-remove-mix">
+                            <button type="button"
+                                    class="action primary"
+                                    name="button-action-products"
+                                    id=" button-action-products-<?= $escaper->escapeHtmlAttr($childMixProduct["product_id"]) ?>"
+                                    data-product-id="<?= $escaper->escapeHtmlAttr($childMixProduct["product_id"]) ?>"
+                                    data-bind="i18n: 'Remover do Mix'"
+                                    data-trigger="remove-to-mix"
+                            >
+                            </button>
+                        </div>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php endif; ?>

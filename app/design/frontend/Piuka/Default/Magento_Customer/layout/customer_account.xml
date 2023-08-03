@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+
+		<referenceBlock name="form.subscribe" remove="true" />
+
+        <referenceBlock name="customer-account-navigation-downloadable-products-link" remove="true"/>
+        <referenceBlock name="customer-account-navigation-magento-invitation-link" remove="true"/>
+        <referenceBlock name="customer-account-navigation-checkout-sku-link" remove="true"/>
+        <referenceBlock name="customer-account-navigation-gift-card-link" remove="true"/>
+        <referenceBlock name="customer-account-navigation-giftregistry-link" remove="true"/>
+        <referenceBlock name="customer-account-navigation-reward-link" remove="true"/>
+        <referenceBlock name="customer-account-navigation-return-history-link" remove="true"/>
+        <referenceBlock name="customer-account-navigation-my-credit-cards-link" remove="true"/>
+
+
+        <referenceBlock name="customer-account-navigation-delimiter-0" remove="true"/>
+        <referenceBlock name="customer-account-navigation-delimiter-1" remove="true"/>
+        <referenceBlock name="customer-account-navigation-delimiter-2" remove="true"/>
+
+    </body>
+</page>

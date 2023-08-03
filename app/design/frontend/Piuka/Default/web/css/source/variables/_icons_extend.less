@@ -1,0 +1,103 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Icons variables
+//  _____________________________________________
+
+@icon__position: before;
+@icon__text-hide: false;
+@icon__height: 26px;
+@icon__width: 26px;
+@icon__margin: '';
+@icon__vertical-align: middle;
+
+@icon-image__position-x: 0;
+@icon-image__position-y: 0;
+
+@icon-sprite__position-x: 0;
+@icon-sprite__position-y: 0;
+@icon-sprite__grid: 26px;
+
+@icon-font: @icons__font-name;
+@icon-font__position: @icon__position;
+@icon-font__text-hide: @icon__text-hide;
+@icon-font__margin: @icon__margin;
+@icon-font__size: 1em;
+@icon-font__line-height: @icon-font__size;
+@icon-font__color: inherit;
+@icon-font__color-hover: false;
+@icon-font__color-active: false;
+@icon-font__vertical-align: @icon__vertical-align;
+@icon-font__display: inline-block;
+
+@icon-calendar__font-size: 40px;
+
+//
+//  Variables for icons-blank-theme
+//  ---------------------------------------------
+
+// ToDo UI: move it to blank theme variables
+@icon-update: @fa-var-redo-alt;
+@icon-star: @fa-var-star;
+@icon-settings: @fa-var-cogs;
+@icon-pointer-down: @fa-var-caret-down;
+@icon-menu: @fa-var-bars;
+@icon-location: @fa-var-location;
+@icon-list: @fa-var-list;
+@icon-info: @fa-var-info;
+@icon-comment-reflected: @fa-var-comment;
+@icon-collapse: @fa-var-compress;
+@icon-pointer-left: @fa-var-caret-left;
+@icon-flag: @fa-var-flag;
+@icon-expand: @fa-var-expand;
+@icon-compare-full: @fa-var-clipboard-check;
+@icon-compare-empty: @fa-var-clipboard-check;
+@icon-gift-registry: @fa-var-gifts;
+@icon-present: @fa-var-gift;
+@icon-wishlist: @fa-var-heart;
+@icon-cart: @fa-var-shopping-bag;
+@icon-user: @fa-var-user;
+@icon-search: @fa-var-search;
+@icon-arrow-right:@fa-var-chevron-right;
+@icon-var-arrow-right:@fa-var-arrow-right;
+@minicart-icons-color: @color-text-seconday;
+@icon-arrow-down:@fa-var-chevron-down;
+@icon-filter:@fa-var-filter;
+@icon-location:@fa-var-map-marker-alt;
+@icon-info-account:@fa-var-clipboard-list;
+@icon-lock:@fa-var-lock-alt;
+@icon-envelope:@fa-var-envelope-open;
+@icon-edit:@fa-var-pen;
+@icon-trash:@fa-var-trash;
+@icon-arrow-up:@fa-var-chevron-up;
+@icon-plus:@fa-var-plus;
+@icon-warning:@fa-var-exclamation-triangle;
+@icon-minus-remove:@fa-var-minus-square;
+@icon-bell:@fa-var-bell;
+
+._lib-icon-font(
+    @_icon-font-content,
+    @_icon-font,
+    @_icon-font-size,
+    @_icon-font-line-height,
+    @_icon-font-color,
+    @_icon-font-margin,
+    @_icon-font-vertical-align
+) {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    ._lib-icon-font-size(@_icon-font-size, @_icon-font-line-height);
+    .lib-css(color, @_icon-font-color);
+    .lib-css(content, @_icon-font-content);
+    .lib-css(font-family, @_icon-font);
+    .lib-css(margin, @_icon-font-margin);
+    .lib-css(vertical-align, @_icon-font-vertical-align);
+    display: inline-block;
+    font-weight: normal;
+    overflow: visible;
+    speak: none;
+    text-align: center;
+}

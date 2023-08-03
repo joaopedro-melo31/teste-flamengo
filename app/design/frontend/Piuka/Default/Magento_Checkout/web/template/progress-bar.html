@@ -1,0 +1,16 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<div class="piuka-progress-bar-checkout">
+	<h1>FINALIZAR COMPRA</h1>
+	<ul class="opc-progress-bar-piuka">
+	    <!-- ko foreach: { data: steps().sort(sortItems), as: 'item' } -->
+	        <li class="opc-progress-bar-item-piuka" data-bind="css: item.isVisible() ? '_active' : ($parent.isProcessed(item) ? '_complete' : '')">
+	            <span data-bind="i18n: item.title, click: $parent.navigateTo"></span>
+	        </li>
+	    <!-- /ko -->
+	</ul>
+</div>

@@ -1,0 +1,378 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Color variables
+//  _____________________________________________
+
+@color-blue-dodger: #008bdb;
+@color-black_dark: #333333;
+
+@color-white: #fff;
+
+@color-text-input:#394C60;
+
+@color-darkie-gray: #8a837f;
+@color-gray19: #303030;
+@color-gray20: #333;
+@color-gray34: #575757;
+@color-gray37: #5e5e5e;
+@color-gray40: #666;
+@color-gray43: #6d6d6d;
+@color-gray46: #757575;
+@color-gray52: #858585;
+@color-gray56: #8f8f8f;
+@color-gray60: #999;
+@color-gray62: #9e9e9e;
+@color-gray64: #a3a3a3;
+@color-gray68: #adadad;
+@color-gray76: #c2c2c2;
+@color-gray78: #c7c7c7;
+@color-gray79: #c9c9c9;
+@color-gray80: #ccc;
+@color-gray82: #d1d1d1;
+@color-gray83: #d4d4d4;
+@color-gray89: #e3e3e3;
+@color-gray90: #e5e5e5;
+@color-gray91: #e8e8e8;
+@color-gray92: #ebebeb;
+@color-gray94: #f0f0f0;
+@color-gray95: #f2f2f2;
+@color-gray96: #8B90A0;
+@color-gray_light: #cccccc;
+@color-lighter-grayish: #cacaca;
+@color-very-dark-gray: #666;
+@color-white-smoke: #f5f5f5;
+@color-white-dark-smoke: #efefef;
+@color-white-fog: #f8f8f8;
+
+@color-gray-light0: #f6f6f6;
+@color-gray-light01: #F3F6F9;
+@color-gray-light1: #e5efe5;
+@color-gray-light2: #bbb;
+@color-gray-light3: #aeaeae;
+@color-gray-light4: #cecece;
+@color-gray-light5: #c1c1c1;
+@color-gray-light6: #c5c5c5;
+
+@color-gray-middle1: #e4e4e4;
+@color-gray-middle2: #c6c6c6;
+@color-gray-middle3: #7e807e;
+@color-gray-middle4: #6e716e;
+@color-gray-middle5: #707070;
+
+@color-gray-darken0: #eee;
+@color-gray-darken1: #e2e2e2;
+@color-gray-darken2: #cdcdcd;
+@color-gray-darken3: #555;
+@color-gray-darken4: #494949;
+
+@color-red9: #ff0101;
+@color-red10: #e02b27;
+@color-red11: #b30000;
+@color-red12: #d10029;
+@color-red13: #db240b;
+
+@color-orange-red1: #ff5501;
+@color-orange-red2: #ff5601; // Legacy orange
+@color-orange-red3: #ff5700; // Legacy orange
+@color-orange-red4: #fc5e10; // Legacy orange
+
+@color-dark-green1: #006400;
+
+@color-blue1: #142E52;
+@color-blue2: #1370BC;
+@color-blue3: #00699D;
+@color-blue4: #CCE4F9;
+@color-blue5: #005EB8;
+@color-blue-dark: #142e52;
+@color-blue-link: #8FB8EF;
+@color-sky-blue1: #68a8e0;
+
+@color-pink1: #F7E0E0;
+@color-dark-pink1: #800080; // Legacy pink
+
+@color-brownie: #514943;
+@color-brownie-vanilla: #736963;
+@color-brownie1: #6f4400;
+@color-brownie-light1: #c07600;
+
+@color-yellow-light1: #fdf0d5;
+@color-yellow-light2: #ffee9c;
+@color-yellow-light3: #d6ca8e;
+@color-yellow1: #ff0;
+@color-yellow-star:#FFBC33;
+
+@color-gray-title:#617385;
+@color-gray-breadcrumb:#8B99A7;
+@color-gray-texts:#E0E5EB;
+@color-gray-select:#B6BFC8;
+@color-gray-input-cart:#B6BFC8;
+
+//
+//  Color nesting
+//  ---------------------------------------------
+
+@theme__color__primary: @color-blue1;
+@theme__color__primary-alt: @color-blue2;
+@theme__color__secondary: @color-orange-red1;
+
+@primary__color: @color-gray20;
+@primary__color__dark: darken(@primary__color, 35%); //  #1D1D1B
+@primary__color__darker: darken(@primary__color, 13.5%); // #111
+@primary__color__lighter: lighten(@primary__color, 29%); // #7d7d7d
+@primary__color__light: lighten(@primary__color, 45%); // #a6a6a6
+
+@secondary__color: @color-gray91;
+@secondary__color__light: lighten(@secondary__color, 5%);
+
+@page__background-color: @color-white;
+@panel__background-color: darken(@page__background-color, 6%);
+
+@active__color: @theme__color__secondary;
+@error__color: @color-red10;
+
+@color-gradient-blue1: rgba(91,178,229,1);
+@color-gradient-blue2: rgba(21,153,230,1);
+
+
+//
+// Piuka Colors
+//  _____________________________________________
+
+//
+//  Color variables
+//  _____________________________________________
+
+@color-blue-dodger: #008bdb;
+@color-black_dark: #333333;
+
+@color-white: #fff;
+@color-black:  #1D1D1B;
+
+@color-darkie-gray: #8a837f;
+@color-gray19: #303030;
+@color-gray20: #333;
+@color-gray34: #575757;
+@color-gray37: #5e5e5e;
+@color-gray40: #666;
+@color-gray43: #6d6d6d;
+@color-gray46: #757575;
+@color-gray52: #858585;
+@color-gray55: #8c8c8c;
+@color-gray56: #8f8f8f;
+@color-gray60: #999;
+@color-gray62: #9e9e9e;
+@color-gray64: #a3a3a3;
+@color-gray68: #adadad;
+@color-gray76: #c2c2c2;
+@color-gray78: #c7c7c7;
+@color-gray79: #c9c9c9;
+@color-gray80: #ccc;
+@color-gray82: #d1d1d1;
+@color-gray83: #d4d4d4;
+@color-gray89: #e3e3e3;
+@color-gray90: #e5e5e5;
+@color-gray91: #e8e8e8;
+@color-gray92: #ebebeb;
+@color-gray94: #f0f0f0;
+@color-gray95: #f2f2f2;
+@color-gray_light: #cccccc;
+@color-lighter-grayish: #cacaca;
+@color-very-dark-gray: #666;
+@color-white-smoke: #f5f5f5;
+@color-white-dark-smoke: #efefef;
+@color-white-fog: #f8f8f8;
+
+@color-gray-light0: #f6f6f6;
+@color-gray-light01: #f4f4f4;
+@color-gray-light1: #e5efe5;
+@color-gray-light2: #bbb;
+@color-gray-light3: #aeaeae;
+@color-gray-light4: #cecece;
+@color-gray-light5: #c1c1c1;
+@color-gray-light6: #c5c5c5;
+
+@color-gray-middle1: #e4e4e4;
+@color-gray-middle2: #c6c6c6;
+@color-gray-middle3: #7e807e;
+@color-gray-middle4: #6e716e;
+@color-gray-middle5: #707070;
+
+@color-gray-darken0: #eee;
+@color-gray-darken1: #e2e2e2;
+@color-gray-darken2: #cdcdcd;
+@color-gray-darken3: #555;
+@color-gray-darken4: #494949;
+
+@color-red9: #ff0101;
+@color-red10: #e02b27;
+@color-red11: #b30000;
+@color-red12: #d10029;
+
+@color-orange-red1: #ff5501;
+@color-orange-red2: #ff5601; // Legacy orange
+@color-orange-red3: #ff5700; // Legacy orange
+@color-orange-red4: #fc5e10; // Legacy orange
+
+@color-dark-green1: #006400;
+@color-light-green1: #89D6B7;
+
+@color-blue-yara: #142E52;
+@color-blue-yara-dark: darken(#142E52, 20%);
+@color-blue1: #142E52;
+@color-blue2: #1370BC;
+@color-blue3: #00699D;
+@color-sky-blue1: #68a8e0;
+
+@color-pink1: #F7E0E0;
+@color-dark-pink1: #800080; // Legacy pink
+
+@color-brownie: #514943;
+@color-brownie-vanilla: #736963;
+@color-brownie1: #6f4400;
+@color-brownie-light1: #c07600;
+
+@color-yellow-light1: #fdf0d5;
+@color-yellow-light2: #ffee9c;
+@color-yellow-light3: #d6ca8e;
+@color-yellow1: #ff0;
+
+
+
+//
+// Piuka Background Colors
+// ----------------------------------------------
+@bg-color-primary: #FFFFFF;
+@bg-color-secondary: #F3F6F9;
+@bg-color-tertiary: #8B90A0;
+@bg-color-divider: #E0E6EB;
+@bg-color-divider2 :#D6DAE4;
+@bg-color-divider3: #CFE2FC;
+@bg-color-5: #C6C6C6;
+@bg-color-card: rgba(36, 39, 52, 0.102);
+@bg-color-menu-mobile: #142E52;
+@bg-color-arrow: rgba(139, 144, 160, .25);
+@bg-color-arrow-disable: rgba(139, 144, 160, .12);
+@bg-color-whish: rgba(10, 23, 41, 0.5);
+
+
+//
+// Piuka Text Colors
+// ----------------------------------------------
+@color-text-primary:#232735;
+@color-text-seconday:#505565;
+@color-text-tertiary:#8B90A0;
+@color-input-border:#C6C6C6;
+@color-text-inverted:#FFFFFF;
+@color-text-error:#BC001F;
+@color-text-success:#004F29;
+@color-text-name: #394D60;
+
+//
+// Piuka Interactive Colors
+// ----------------------------------------------
+@color-interactive-primary:@color-dark-pink;
+@color-interactive-seconday:@color-pink;
+@color-interactive-tertiary:#CCE4F9;
+
+//
+// Piuka Brand Backgrounds
+// ----------------------------------------------
+@color-bg-brand-primary:#00205B;
+@color-bg-brand-secondary:#314b7b;  //#00205B with opacity: 0.8
+@color-bg-brand-tertiary:#187ED1;
+
+
+//
+// Piuka Status Colors (Icons)
+// ----------------------------------------------
+@color-functional-error:#BC001F;
+@color-functional-warning:#EEA200;
+@color-functional-success:#004F29;
+@color-functional-info:#DB3D5A;
+
+//
+// Piuka Status Backgrounds
+// ----------------------------------------------
+@color-bg-error:#FCE8E6;
+@color-bg-warning:#FEF7E0;
+@color-bg-success:#EEFEF1;
+@color-bg-info:#F3F6F9;
+@color-bg-timeline:#C4C4C4;
+
+//
+// Piuka Special Colors
+// ----------------------------------------------
+@color-pink:#F7E0E0;
+@color-dark-pink:#E35C94;
+@color-light-pink:#F6E0E0;
+@color-dark-pink-bt:#ec008c;
+@color-yellow:#EDD79D;
+@color-yellow-stars:#ECD6A0;
+@color-black:  #1D1D1B;
+@color-green:#86D7B6;
+@color-gray:#AAA;
+@color-l-gray:#EFECE7;
+@color-gray-price:#ABABAB;
+@color-l-white:#F9F9F9;
+@color-border-gray:#EDEDED;
+@color-border-input:#D3D3D3;
+@color-border-product:#EAEAEA;
+@color-dark:#000;
+@color-copy:#675F5D;
+@color-breadcrumb:#949494;
+@color-select:#D5D5D5;
+@colot-title-subtitle:#3B3B3A;
+@color-input-qty:#D9D9D9;
+@color-button-hover:#2e2e2e;
+@color-out-stock:#C17500;
+@color-filter:#f6e0e0;
+@color-warning-mix:#FF0000;
+@color-label-rma:#404040;
+
+
+@color-tbd-01: #5BB2E5;
+@color-tbd-02: #7D6FDF;
+@color-tbd-03: #A45CC3;
+@color-tbd-04: #BB595B;
+@color-tbd-05: #EC9468;
+@color-tbd-06: #FFE266;
+@color-tbd-07: #39B27B;
+@color-tbd-08: #89BF52;
+@color-tbd-09: #459F8D;
+@color-empreendedorismo:#FF8040;
+@color-financas: #83BF30;
+@color-marketing:#00CC92;
+@color-leis:#994599;
+
+@color-bg-button-disabled:#A5C7E4;
+
+
+
+//
+// Piuka Product Page Colors
+// ----------------------------------------------
+@title-color: #0F438A;
+@background-grey: #F5F7FA;
+@tag-color-1: #EBFAF0;
+@tag-color-3: #35B068;
+@tag-color-4: #F5623D;
+@tag-color-5: #FFEAE5;
+@bar-color-2: #5C8FD6;
+@bar-color-5: #006BFF;
+@bar-color-6: #F0F6FE;
+@opacity-color-1: rgba(10,23,41,0.5);
+@modal-light-green: #D8F4D0;
+@modal-dark-green: #649557;
+@modal-text: #69758B;
+
+//
+// Piuka dark theme colors
+// -----------------------------------------------
+@header-background: #161616;
+@card-background: #121A21;
+@tag-color-dark: #212A34;
+@text-dark: #2B3D50;

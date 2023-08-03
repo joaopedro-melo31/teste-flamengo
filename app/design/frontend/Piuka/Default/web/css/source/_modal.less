@@ -1,0 +1,215 @@
+& when (@media-common = true) {
+    .modal-inner-wrap{
+        max-width: 822px;
+    }
+    .block-authentication{
+        border-top: 0 !important;
+        .block-customer-login{
+            .block-title{
+                line-height: 35px;
+                font-size: 20px;
+            }
+            .block-content{
+                .actions-toolbar{
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-bottom: 10px !important;
+                    div.secondary{
+                        order: 1;
+                        margin: 0 0 24px 0;
+                        padding: 0;
+                        span{
+                            color: @color-black;
+                            text-decoration: underline;
+                            font-size: 12px;
+                            font-weight: bold;
+                        }
+                    }
+                    .primary{
+                        order: 2;
+                        button{
+                            width: 324px;
+                            height: 40px;
+                            padding: 0;
+                            background: @color-black;
+                            color: @color-white;
+                            text-transform: uppercase;
+                            border-radius: 4px;
+                            span{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+                form{
+                    max-width: 324px;
+                }
+                .fieldset{
+                    .field{
+                        margin-bottom: 15px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        .label{
+                            width: 100%;
+                            text-align: left;
+                            padding-bottom: 12px;
+                            font-size: 12px;
+                        }
+                        .control{
+                            display: block;
+                            width: 100%;
+                        }
+                        input{
+                            border: 1px solid @color-gray;
+                        }
+                    }
+                }
+            }
+            .social-login-authentication-popup{
+                margin-bottom: 15px;
+                width: 100% !important;
+                padding: 0 !important;
+                .btn-google{
+                    width: 322px;
+                    text-align: center;
+                    background: @color-black;
+                    height: 40px;
+                    padding: 0;
+                    span{
+                        display: block;
+                        left: 75px;
+                        top: 3px;
+                        font-size: 1.2rem;
+                        border: none;
+                        font-weight: 400;
+                        background: none;
+                        &::before{
+                            content: "\f1a0";
+                        }
+                    }
+                    p{
+                        padding: 12px 20px 6px 10px !important;
+                        font-size: 11px;
+                        font-weight: bold;
+                        color: @color-white;
+                        text-transform: uppercase;
+                    }
+                }
+                .btn-facebook{
+                    width: 324px;
+                    text-align: center;
+                    background: @color-black;
+                    border: none;
+                    height: 40px;
+                    padding: 0;
+                    span{
+                        display: block;
+                        left: 70px;
+                        top: 1px;
+                        font-size: 1.2rem;
+                        border: none;
+                    }
+                    p{
+                        padding: 12px 20px 6px 10px !important;
+                        font-size: 11px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        .block-new-customer{
+            .block-title{
+                line-height: 35px;
+                font-size: 20px;
+            }
+            .block-content{
+                p{
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: .8rem;
+                }
+                ul{
+                    margin-bottom: 25px;
+                    li{
+                        font-size: 12px;
+                    }
+                } 
+                .actions-toolbar{
+                    margin: auto;
+                    a{
+                        background: @color-light-green1;
+                        border: none;
+                        padding: 5px 0 6px;
+                        height: 40px;
+                        text-transform: uppercase;
+                        width: 324px;
+                        font-size: 12px;
+                        &:hover{
+                            background: @color-light-green1 !important;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.media-width(@extum, @break) when (@extum = 'max') and (@break = @screen__m) {
+    .block-authentication{
+        .block-new-customer{
+            .block-content{
+                .actions-toolbar{
+                    a{
+                        width: 100% !important;
+                        &:hover{
+                            background: @color-light-green1;
+                        }
+                    }
+                }
+            }
+        }
+        .block-customer-login{
+            display: flex;
+            flex-wrap: wrap;
+            .social-login-authentication-popup{
+                padding: 0;
+                .btn-google{
+                    width: 99%;
+                    padding: 0;
+                    span{
+                        left: 45px !important;
+                    }
+                }
+                .btn-facebook{
+                    width: 100%;
+                    padding: 0;
+                    span{
+                        left: 35px !important;
+                    }
+                }
+            }
+            .block-content{
+                .fieldset{
+                    padding-right: 12px;
+                    .field{
+                        display: block;
+                        .label{
+                            float: left;
+                        }
+                        .control{
+                            display: block;
+                        }
+                    }
+                }
+                .actions-toolbar{
+                    .primary{
+                        button{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

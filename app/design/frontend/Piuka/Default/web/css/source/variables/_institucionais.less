@@ -1,0 +1,809 @@
+
+& when (@media-common = true) {
+	.cms-nossas-lojas, .cms-politicas-de-privacidade, .cms-sobre{
+		.newsletter{
+			display:none !important; 
+		}
+	}
+	.header-pages-institucionais{
+		h1{
+			color:@color-white;
+			font-weight:400;
+
+		}
+		.content{
+			position:relative;
+			img{
+				position:absolute;
+				right:0;
+			}
+		}
+	}
+	.info-lojas{
+		img{
+			border-radius:100%;
+		}
+		.text-info-lojas{
+			h2{
+				display:block;
+				margin:0 0 12px 0;
+				font-weight: 400;
+				color:@color-black;
+			}
+			h3{
+				display:block;
+				margin:0 0 24px 0;
+				font-weight: 700;
+				color: @color-dark-pink;
+			}
+			p{
+				display:block;
+				margin:0 0 15px 0;
+				font-weight: 500;
+				font-size:14px;
+				color:@color-black;
+			}
+			strong{
+				font-size:14px;
+				color:@color-black;
+			}
+		}
+	}
+	.buttons-lojas{
+		display:flex;
+		align-items:center;
+		justify-content:space-between;
+		a{
+			height:42px;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			font-weight: 700;
+			font-size:14px;
+			text-align: center;
+			text-transform: uppercase;
+			color:@color-white;
+			border-radius:4px;
+			&.bt-loja-chegar{
+				background:@color-black;
+			}
+			&.bt-loja-whats{
+				background:@color-dark-pink;
+			}
+		}
+	}
+	.cms-politicas-de-privacidade{
+		#accordion{
+			margin-bottom:100px;
+			h4{
+				font-weight: 400;
+				font-size: 28px;
+				line-height: 34px;
+				color:@color-black;
+				text-transform:uppercase;
+				display:flex !important;
+				align-items:center;
+				justify-content:space-between;
+				.lib-icon-font(
+	                @icon-arrow-down,
+					@_icon-font-position: after,
+	                @_icon-font-size: 18px,
+	                @_icon-font-color: @color-dark-pink
+	            );
+			}
+			.active{
+				h4{
+					.lib-icon-font(
+		                @icon-arrow-up,
+		                @_icon-font-position: after,
+		                @_icon-font-size: 18px,
+		                @_icon-font-color: @color-dark-pink
+		            );
+				}
+			}
+			div[data-role="collapsible"]{
+				margin:55px 0 0 0;
+			}
+			div[data-role="content"]{
+				font-weight: 500;
+				font-size:14px;
+				line-height:21px;
+				color:@color-black;
+			}
+		}
+	}
+	.cms-promocoes{
+		.text-promocoes{
+			p{
+				margin:0 0 25px 0;
+			}
+		}
+	}
+	.row-social-block{
+		margin:100px 0 0 0;
+		h5{
+			margin:0 0 25px 0;
+		}
+		p{
+			margin:0 0 35px 0;
+		}
+		ul{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0;
+			list-style: none;
+			li{
+				margin:0 25px 0 0;
+				&:last-child{
+					margin-right:0;
+				}
+			}
+		}
+	}
+	.texts-cupons{
+		> p{
+			display:block;
+			margin:0 0 35px 0;
+			font-weight: 500;
+			font-size: 14px;
+			color:@color-black;
+		}
+		.bg-columns-texts-cupons{
+			display:flex;
+			.columns-texts-cupons{
+				padding:20px 13px;
+				background: @color-l-white;
+				border-radius: 4px;
+				text-align:center;
+				strong{
+					display:block;
+					margin:0 0 15px 0;
+					font-weight: 700;
+					font-size: 16px;
+					text-align: center;
+					color: @color-dark-pink;
+				}
+				> span{
+					width: 120px;
+					height: 48px;
+					display:flex;
+					align-items:center;
+					justify-content:center;
+					margin:0 auto 20px;
+					border: 2px solid @color-green;
+					border-radius: 24px;
+					font-weight: 700;
+					font-size: 16px;
+					text-transform: uppercase;
+					color: @color-green;
+				}
+				p{
+					display:flex;
+					align-items:center;
+					justify-content:center;
+					font-weight: 500;
+					font-size: 12px;
+					color:@color-black;
+					span{
+						display:flex;
+						align-items:center;
+						justify-content:center;
+						margin:0 0 0 15px;
+						padding:3px 8px;
+						background: @color-pink;
+						border-radius: 4px;
+						font-weight: 700;
+						font-size: 12px;
+						color:@color-black;
+					}
+				}
+				small{
+					font-weight: 500;
+					font-size: 9px;
+					line-height: 14px;
+					text-align: center;
+					color: @color-black;
+				}
+				&.list-columns-texts-cupons{
+					text-align:left;
+					> strong{
+						font-weight: 700;
+						font-size: 16px;
+						color:@color-black;
+						text-align: left;
+					}
+					ul{
+						padding: 0;
+						list-style: none;
+						li{
+							display:block;
+							margin:0 0 10px 0;
+							font-weight: 400;
+							font-size: 14px;
+							color: @color-black;
+							strong{
+								display:initial;
+								font-weight: 700;
+								font-size: 14px;
+								color: @color-dark-pink;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.links-page-duvidas{
+		.row-full-width-inner{
+			max-width:100% !important;
+			.bg-page-duvidas{
+				position:relative;
+				&:before{
+					content:"";
+					width:100%;
+					height:1px;
+					background:@color-gray80;
+					position:absolute;
+					left:0;
+					top: 20px;
+    				z-index: -1;
+				}
+				.content{
+					max-width:345px;
+					display:block;
+					margin:0 auto;
+					background:@color-white;
+					ul{
+						display:flex;
+						align-items:center;
+						justify-content:space-between;
+						list-style:none;
+						padding:0;
+						li{
+							a{
+								width:164px;
+								height:42px;
+								display:flex;
+								align-items:center;
+								justify-content:center;
+								border-radius: 4px;
+								font-weight: 700;
+								font-size:14px;
+								text-transform: uppercase;
+								color:@color-black;
+								background:@color-gray94;
+								&.active{
+									color:@color-white;
+									background:@color-black;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.cms-sobre{
+		.columns{
+			.column.main{
+				padding:0;
+			}
+		}
+	}
+	.row-banner-sobre-nos{
+		.content{
+			display:flex;
+			align-items:center;
+			position:relative;
+			&:before{
+				content:"";
+				height: 16px;
+				background:@color-dark-pink;
+				bottom:-16px;
+				position:absolute;
+			}
+			.img-banner-sobre{
+				img{
+					display:block;
+				}
+			}
+			.text-banner-sobre{
+				img{
+					display:block;
+					margin:0 0 20px 0;
+				}
+				h1{
+					margin-bottom:20px;
+					color:@color-white;
+					font-weight: 400;
+					strong{
+						display:block;
+						color:@color-white;
+						font-weight:700;
+					}
+				}
+				p{
+					display:block;
+					margin:0 0 25px 0;
+					font-weight: 500;
+					font-size:14px;
+					line-height:21px;
+					color:@color-white;
+					&:last-child{
+						margin-bottom:0;
+					}
+				}
+			}
+		}
+	}
+	.row-berco-moda{
+		.content{
+			display:flex;
+			align-items:center;
+			img{
+				display:block;
+				margin:0 30px 0 0;
+			}
+			.text-berco-moda{
+				h2{
+					color:@color-black;
+					strong{
+						color: @color-dark-pink;
+					}
+				}
+				p{
+					font-weight: 500;
+					font-size:14px;
+					color:@color-black;
+					line-height:21px;
+				}
+			}
+		}
+	}
+	.row-quem-usa-ama-sobre{
+		.content{
+			position:relative;
+			&:before{
+				content:"";
+				position:absolute;
+				background: @color-yellow;
+			}
+			.text-quem-ama-usa-sobre{
+				h4{
+					display:block;
+					font-weight: 400;
+					color:@color-dark-pink;
+				}
+				p{
+					font-weight: 500;
+					font-size:14px;
+					color:@color-black;
+					line-height:21px;
+				}
+			}
+		}
+	}
+	.row-mosaic-sobre{
+		.content{
+			.box-mosaic-sobre{
+				display:flex;
+				align-items:center;
+				.img-box-mosaic-sobre{
+					img{
+						display:block;
+					}
+					&.img-box-mosaic-sobre-border{
+						position:relative;
+						&:before{
+							content:"";
+							background:@color-dark-pink;
+							position:absolute;
+						}
+					}
+				}
+				.text-mosaic-sobre{
+					h3{
+						display:block;
+						color:@color-black;
+						strong{
+							color:@color-dark-pink;
+						}
+					}
+					p{
+						font-weight: 500;
+						font-size: 14px;
+						color:@color-black;
+						line-height:21px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+//
+//  Mobile only
+//  _____________________________________________
+.media-width(@extum, @break) when (@extum = 'max') and (@break = @screen__m) {
+	.header-pages-institucionais{
+		padding:30px 0 !important;
+		h1{
+			font-size:22px;
+		}
+		.content{
+			padding:0 15px;
+			img{
+    			width: 50%;
+				top:-42px;
+			}
+		}
+	}
+	.cms-nossas-lojas{
+		.pagebuilder-column-group{
+			padding:0 15px;
+			.pagebuilder-column{
+				text-align:center;
+			}
+		}
+		.page-footer{
+			.pagebuilder-column-group{
+				.pagebuilder-column{
+					text-align:left;
+				}
+			}
+		}
+	}
+	.info-lojas{
+		img{
+			display:block;
+			margin:0 auto 30px;
+		}
+		.text-info-lojas{
+			h2{
+				font-size: 18px;
+			}
+			h3{
+				font-size: 18px;
+			}
+			strong{
+				margin-bottom:25px;
+			}
+		}
+	}
+	.buttons-lojas{
+		max-width:320px;
+   	 	margin: 20px auto 0;
+		a{
+			width:150px;
+			&.bt-loja-chegar{
+				margin-right:20px;
+			}
+		}
+	}
+	.texts-cupons{
+		padding:0 15px;
+		.bg-columns-texts-cupons{
+			flex-wrap: wrap;
+			.columns-texts-cupons{
+				width:100% !important;
+				margin:0 0 30px 0;
+			}
+		}
+	}
+	.row-banner-sobre-nos{
+		padding:45px 0 0 0 !important;
+		.content{
+			flex-wrap:wrap;
+			padding:0 15px;
+			&:before{
+				width:90%;
+				right:0;
+				left:0;
+				margin:0 auto;
+			}
+			.img-banner-sobre{
+				width:100%;
+				order:2;
+			}
+			.text-banner-sobre{
+				width:100%;
+				margin:0 0 20px 0;
+				h1{
+					font-size: 22px;
+					strong{
+						font-size: 32px;
+					}
+				}
+			}
+		}
+	}
+	.row-berco-moda{
+		.content{
+			padding:0 15px;
+			flex-wrap:wrap;
+			img{
+				order:2;
+			}
+			.text-berco-moda{
+				width:100%;
+				h2{
+					display:block;
+					margin:0 0 25px 0;
+					font-weight: 400;
+					font-size: 22px;
+					line-height: 27px;
+					strong{
+						font-size: 22px;
+					}
+				}
+				p{
+					display:block;
+					margin:0 0 40px 0;
+				}
+			}
+		}
+	}
+	.row-quem-usa-ama-sobre{
+		padding:45px 0 56px 0;
+		.content{
+			padding:0 15px;
+			&:before{
+				width:90%;
+				height:12px;
+				left:0;
+				right:0;
+				top:-57px;
+				margin:0 auto;
+			}
+			.text-quem-ama-usa-sobre{
+				max-width:100%;
+				margin:0 0 40px 0;
+				h4{
+					margin:0 0 35px 0;
+					font-size:28px;
+					line-height:34px;
+				}
+			}
+			img{
+				display:block;
+				margin:0 auto;
+			}
+		}
+	}
+	.row-mosaic-sobre{
+		.content{
+			padding:0 15px;
+			.box-mosaic-sobre{
+				flex-wrap:wrap;
+				margin:0 0 55px 0;
+				.img-box-mosaic-sobre{
+					width:100%;
+					order:2;
+					&.img-box-mosaic-sobre-border{
+						position:relative;
+						&:before{
+							width:10px;
+						    height: 80%;
+						    left: -10px;
+						    top: 8%;
+						}
+					}
+				}
+				.text-mosaic-sobre{
+					width:100%;
+					order:-1;
+					h3{
+						margin:0 0 22px 0;
+						font-weight: 400;
+						font-size: 22px;
+						line-height: 27px;
+						strong{
+							font-size: 22px;
+							line-height: 27px;
+						}
+					}
+					p{
+						display:block;
+						margin:0 0 40px 0;
+					}
+				}
+			}
+		}
+	}
+	.cms-duvidas, .cms-devolucoes{
+		.columns{
+			.row-full-width-inner{
+				div[data-content-type="text"]{
+					p, span{
+						font-size:14px !important;
+					}
+				}
+			}
+			.row-text-cms{
+				padding:0 15px;
+			}
+		}
+	}
+	.cms-politicas-de-privacidade{
+		#accordion{
+			padding:0 15px;
+			h4{
+				font-size:18px !important;
+			}
+		}
+	}
+	.cms-promocoes{
+		.text-promocoes{
+			div[data-content-type="text"]{
+				padding:0 15px;
+			}
+		}
+	}
+}
+
+
+//Desktop
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+	.header-pages-institucionais{
+		h1{
+			font-size:32px;
+		}
+		.content{
+			img{
+    			top: -140px;
+			}
+		}
+	}
+	.cms-nossas-lojas{
+		.pagebuilder-column-group{
+			align-items:center;
+			.pagebuilder-column{
+				align-self:center !important;
+			}
+			.column-buttons-loja{
+				justify-content:center;
+			}
+		}
+	}
+	.info-lojas{
+		display:flex;
+		align-items:center;
+		.text-info-lojas{
+			margin-left:40px;
+			h2{
+				font-size: 28px;
+			}
+			h3{
+				font-size: 28px;
+			}
+			p{
+			}
+			strong{
+
+			}
+		}
+	}
+	.buttons-lojas{
+		a{
+			width:160px;
+		}
+	}
+	.texts-cupons{
+		.bg-columns-texts-cupons{
+			.columns-texts-cupons{
+				width:344px;
+				margin:0 15px 0 0;
+				&.list-columns-texts-cupons{
+					width:526px;
+					margin:0;
+				}
+			}
+		}
+	}
+	.row-banner-sobre-nos{
+		.content{
+			justify-content: space-between;
+			&:before{
+				width: 530px;
+				right:0;
+			}
+			.text-banner-sobre{
+				max-width:355px;
+				h1{
+					font-size: 32px;
+					strong{
+						font-size: 52px;
+					}
+				}
+			}
+		}
+	}
+	.row-berco-moda{
+		.content{
+			max-width:940px;
+			margin:0 auto;
+			.text-berco-moda{
+				max-width:610px;
+				h2{
+					display: block;
+					margin: 0 0 30px 0;
+					font-weight: 400;
+					font-size: 28px;
+					line-height: 34px;
+					strong{
+						display:block;
+						font-weight: 700;
+						font-size: 28px;
+						line-height: 34px;
+					}
+				}
+				p{
+					font-weight: 500;
+					font-size:14px;
+					color:@color-black;
+					line-height:21px;
+				}
+			}
+		}
+	}
+	.row-quem-usa-ama-sobre{
+		.content{
+			max-width: 1075px;
+    		margin: 0 auto;
+			&:before{
+				width: 492px;
+				height: 24px;
+				left:0;
+				top:-24px;
+			}
+			.text-quem-ama-usa-sobre{
+				max-width:438px;
+				padding:88px 0;
+				h4{
+					margin:0 0 20px 0;
+					font-size:40px;
+					line-height:49px;
+				}
+			}
+			img{
+				position:absolute;
+				right:0;
+				top:-70px;
+			}
+		}
+	}
+	.row-mosaic-sobre{
+		.content{
+			.box-mosaic-sobre{
+				justify-content:space-between;
+				.img-box-mosaic-sobre{
+					&.img-box-mosaic-sobre-border{
+						&:before{
+							width:24px;
+							height:470px;
+							left:-24px;
+							top:50px;
+						}
+					}
+				}
+				.text-mosaic-sobre{
+					max-width:415px;
+					h3{
+						margin:0 0 32px 0;
+						font-weight: 400;
+						font-size: 28px;
+						line-height: 34px;
+						strong{
+							display:block;
+							font-weight: 700;
+							font-size: 28px;
+							line-height: 34px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

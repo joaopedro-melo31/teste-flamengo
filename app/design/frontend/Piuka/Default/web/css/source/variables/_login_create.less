@@ -1,0 +1,466 @@
+
+& when (@media-common = true) {
+	.cnpj-checkbox{
+		display:none !important;
+	}
+	.customer-account-login{
+		.login-container{
+			display:block;
+			margin:50px auto 0;
+			background:@color-white;
+			box-shadow: 0px 5px 30px @color-gray90;
+			position:relative;
+			.icon-login-header{
+				position:absolute;
+				top:-28px;
+			}
+			.block-customer-login{
+				width: 100%;
+				float: none;
+				clear: none;
+				h1{
+					display:block;
+					margin:0 0 25px 0;
+					padding:0 0 25px 0;
+					font-weight: 400;
+					font-size: 22px;
+					color:@color-black;
+					border-bottom: 1px solid @color-gray89;
+					text-transform:uppercase;
+				}
+				.block-content{
+					.form-login{
+						.login{
+							&:after{
+								display:none;
+							}
+							.field{
+								margin:0 0 25px 0;
+								.label{
+									width: 100%;
+									display: block;
+									margin:0 0 5px 0;
+									float: none;
+									text-align: left;
+									padding: 0;
+									&:after{
+										display:none;
+									}
+									span{
+										font-weight: 400;
+										font-size: 12px;
+										line-height: 15px;
+										color:@color-black;
+										text-transform:uppercase;
+									}
+								}
+								.control{
+									width:100%;
+									input{
+										height:40px;
+										background:@color-white;
+										border: 1px solid @color-gray;
+										border-radius: 4px;
+									}
+								}
+								&.email{
+									.label{
+										display:flex;
+										align-items:center;
+										justify-content: space-between;
+										margin:0 0 10px 0;
+										.tooltip-login{
+											width:115px;
+											span{
+												width: 115px;
+												height: 28px;
+												background: @color-dark-pink;
+												border-radius: 17px;
+												display:flex;
+												align-items:center;
+												justify-content:center;
+												font-weight: 700;
+												font-size: 11px;
+												color:@color-white;
+											}
+											p{
+												display:none;
+												position: absolute;
+												z-index: 3;
+												left: 0;
+												right: 0;
+												background: @color-dark-pink;
+												border-radius: 3px;
+												font-weight: 400;
+												font-size: 12px;
+												color:@color-white;
+												line-height: 18px;
+												&:before{
+													content:"";
+													width: 0;
+													height: 0;
+													position:absolute;
+													top:-10px;
+													right:15px;
+													border-style: solid;
+													border-width: 0 9px 17px 9px;
+													border-color: transparent transparent @color-dark-pink transparent;
+												}
+											}
+										}
+										&:hover{
+											p{
+												display:block;
+											}
+										}
+									}
+								}
+							}
+                            #remember-me-box{
+                                display: flex;
+                                align-items: center;
+                                &:before{
+                                    display:none;
+                                }
+                                input{
+                                    margin-top:0;
+                                    top:0;
+                                }
+                                .label{
+                                    margin-bottom:0;
+                                }
+                                .tooltip{
+                                    display:none;
+                                }
+                            }
+							.secondary{
+								display:block;
+								margin:0 0 25px 0;
+								.remind{
+									font-weight: 700;
+									font-size: 12px;
+									line-height: 15px;
+									text-decoration-line: underline;
+									color:@color-black;
+								}
+							}
+							.actions-toolbar{
+								margin:0;
+								.action{
+									&.primary{
+										height: 40px;
+									    display: flex;
+									    align-items: center;
+									    justify-content: center;
+										border-radius: 4px;
+										font-weight: 700;
+										font-size: 12px;
+										color:@color-white;
+										text-transform:uppercase;
+										border:none;
+									}
+									&.login{
+										background:@color-black;
+									}
+									&.create{
+										background: @color-green;
+									}
+								}
+							}
+						}
+					}
+					.text-form-login{
+						display:block;
+						margin:25px 0 10px 0;
+						font-size: 12px;
+						text-align: center;
+						color:@color-black;
+						strong{
+							display:block;
+							margin:0 0 20px 0;
+							color:@color-black;
+						}
+						p{
+							color:@color-black;
+						}
+					}
+				}
+			}
+			.social-login-authentication-channel{
+				&.account-social-login{
+					width:100%;
+					.block-content{
+						.social-btn-actions-toolbar{
+							width:100%;
+							margin:0 0 10px 0;
+							.btn-social{
+								width: 100%;
+								height: 40px;
+								padding: 0;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								border-radius: 4px;
+								background:@color-black;
+								font-weight: 700;
+								font-size: 11px;
+								text-transform:uppercase;
+								&:hover{
+									background:@color-button-hover;
+								}
+    							span{
+    								position:relative;
+    								border:none;
+    								background:none;
+    								&.fa-facebook{
+    									color:@color-white;
+    								}
+    								&.fa-google{
+    									&:before{
+    										content:"\f1a0";
+    									}
+    								}
+    							}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.customer-account-create,
+	.customer-account-createpassword{
+		.column{
+			&.main{
+				margin-top:50px;
+			}
+		}
+		.form-create-account,
+		.password.reset{
+			display:block;
+			margin:0 auto;
+			background:@color-white;
+			box-shadow: 0px 5px 30px @color-gray90;
+			position:relative;
+			.icon-login-header{
+				position:absolute;
+				top:-28px;
+			}
+			h1{
+				display:block;
+				margin:0 0 25px 0;
+				font-weight: 400;
+				font-size: 22px;
+				color:@color-black;
+				text-transform:uppercase;
+			}
+			.fieldset.create.info,
+			.fieldset.create.account{
+				margin:0;
+			}
+			.field{
+				margin:0 0 25px 0;
+				.label{
+					width: 100% !important;
+					display: block;
+					margin: 0 0 5px 0;
+					float: none !important;
+					text-align: left !important;
+					padding: 0 !important;
+					&:after{
+						display:none;
+					}
+					span{
+						font-weight: 400;
+						font-size: 12px;
+						line-height: 15px;
+						color:@color-black;
+						text-transform:uppercase;
+					}
+				}
+				.control{
+					width:100% !important;
+					input{
+						height:40px;
+						background:@color-white;
+						border: 1px solid @color-gray;
+						border-radius: 4px;
+					}
+				}
+				&.choice{
+					display:none;
+					&.newsletter{
+						display:flex;
+						align-items:center;
+						.checkbox{
+							margin-top:0;
+							top:0;
+						}
+						.label{
+							width:inherit !important;
+							margin:0;
+						}
+					}
+				}
+				&.date{
+					.control{
+						input{
+							width:100% !important;
+						}
+						.ui-datepicker-trigger{
+							display:none;
+						}
+					}
+				}
+			}
+			.actions-toolbar{
+				margin:0 !important;
+				.action{
+					&.primary{
+						width:140px;
+						height: 40px;
+					    display: flex;
+					    align-items: center;
+					    justify-content: center;
+						border-radius: 4px;
+						font-weight: 700;
+						font-size: 12px;
+						color:@color-white;
+						background:@color-black;
+						text-transform:uppercase;
+						border:none;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+//
+//  Mobile only
+//  _____________________________________________
+.media-width(@extum, @break) when (@extum = 'max') and (@break = @screen__m) {
+	.customer-account-login{
+		.login-container{
+			padding: 45px 20px;
+			.block-customer-login{
+				.block-content{
+					.form-login{
+						.login{
+							.field{
+								&.email{
+									.label{
+										.tooltip-login{
+											p{
+												width: 79%;
+												margin: 15px auto;
+												padding: 20px 25px;
+											}
+										}
+									}
+								}
+							}
+							.actions-toolbar{
+								.action{
+									&.login{
+										width:100%;
+										margin:0 0 25px 0;
+									}
+									&.create{
+										width:100%;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.customer-account-create{
+		.form.create.account{
+			&.form-create-account{
+				padding: 45px 20px;
+			}
+		}
+	}
+	.customer-account-createpassword{
+		.password.reset{
+			padding: 45px 20px;
+		}
+	}
+}
+
+//Desktop
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+	.customer-account-login{
+		.login-container{
+			width: 370px;
+			padding: 45px 120px;
+			.block-customer-login{
+				.block-content{
+					.form-login{
+						.login{
+							.field{
+								&.email{
+									.label{
+										.tooltip-login{
+											p{
+												width:310px;
+												margin: 13px auto;
+    											padding: 20px 30px 25px 30px;
+											}
+										}
+									}
+								}
+							}
+							.actions-toolbar{
+								.action{
+									&.login{
+										width:165px;
+										margin:0 8px 0 0;
+									}
+									&.create{
+										width:195px;
+										margin:0;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.customer-account-create{
+		.form.create.account{
+			&.form-create-account{
+				width: 370px;
+				min-width:inherit;
+				padding: 45px 120px;
+				.fieldset{
+					.input-group-register{
+						display:flex;
+						.field{
+							width:49%;
+							&.field-name-firstname{
+								margin-right:8px;
+							}
+							&.password{
+								margin-right:8px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.customer-account-createpassword{
+		.password.reset{
+				width: 370px;
+				min-width:inherit;
+				padding: 45px 120px;
+		}
+	}
+}

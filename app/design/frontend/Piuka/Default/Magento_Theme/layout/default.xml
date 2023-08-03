@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <head>
+        <script src="Magento_Theme::js/sliders.js" async="async" />
+    </head>
+    <body>
+
+        <referenceBlock name="logo"> 
+            <arguments> 
+                <argument name="logo_width" xsi:type="number">93</argument> 
+            </arguments> 
+        </referenceBlock> 
+
+        <referenceBlock name="store.menu">
+            <block class="Magento\Framework\View\Element\Template" name="menu-mobile" template="Magento_Theme::menu-mobile-links.phtml" before="-"/>
+        </referenceBlock>
+
+        <referenceContainer name="header-wrapper">
+            <container name="header-account-cart" label="HeaderAccountCart" htmlTag="div" htmlClass="header-account-cart">
+                <block class="Magento\Framework\View\Element\Template" name="header-links-stores" template="Magento_Theme::store-blog-links.phtml" before="-"/>
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="page.wrapper">
+            <block class="Magento\Cms\Block\Block" name="top-message" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">top-message</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="footer-container">
+            <block class="Magento\Cms\Block\Block" name="footer_menu">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_menu</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+
+
+        <referenceBlock name="report.bugs" remove="true" />
+        <referenceBlock name="copyright" remove="true" />
+        <referenceBlock name="sidebar.additional" remove="true"/>
+        <referenceBlock name="top.links" remove="true" />
+        <referenceBlock name="footer_links" remove="true"/>
+
+
+        <move element="minicart" destination="header-account-cart" before="-" />
+        <move element="ux_customer_menu" destination="header-account-cart" before="-" />
+        <move element="form.subscribe" destination="main.content" before="footer" />
+        <move element="breadcrumbs" destination="page.main.title" before="-"/>
+
+    </body>
+</page>

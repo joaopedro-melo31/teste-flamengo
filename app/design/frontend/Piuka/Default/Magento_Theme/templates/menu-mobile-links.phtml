@@ -1,0 +1,6 @@
+<div class="custom-menu-mobile">
+	<div class="close-menu-mobile" data-action="toggle-nav">
+		<img src="<?= $this->getViewFileUrl('images/close-menu.png'); ?>" />
+	</div>
+	<?php echo $this->getLayout()->createBlock(\Magento\Cms\Block\Block::class)->setBlockId('custom-menu-mobile')->toHtml();?>
+</div>

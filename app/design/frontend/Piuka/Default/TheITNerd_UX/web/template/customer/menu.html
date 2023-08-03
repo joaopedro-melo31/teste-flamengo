@@ -1,0 +1,28 @@
+<div class="customer-menu--modal">
+    <!-- ko if: isLoggedIn() -->
+    <div class="customer-menu--modal--description">
+        <div class="customer-menu--modal--description--customer-data">
+            <div class="customer-menu--modal--description--customer-data--name">
+                <span>Olá, <span data-bind="text: customer().fullname"> </span></span>
+            </div>
+        </div>
+    </div>
+    <div class="customer-menu--modal--links">
+        <ul>
+            <!-- ko foreach: links -->
+            <li><a data-bind="i18n: label, attr: {href: link}"></a></li>
+            <!-- /ko -->
+        </ul>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko ifnot: isLoggedIn() -->
+    <div class="customer-menu--modal--links">
+        <ul>
+            <!-- ko foreach: guestLinks -->
+            <li><a data-bind="i18n: label, attr: {href: link}"></a></li>
+            <!-- /ko -->
+        </ul>
+    </div>
+    <!-- /ko -->
+</div>

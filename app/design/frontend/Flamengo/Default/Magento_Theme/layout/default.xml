@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="footer-container">
+            <block class="Magento\Cms\Block\Block" name="footer_menu">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_menu</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="footer_menu1">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_menu1</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="footer_menu2">
+                <arguments>
+                <argument name="block_id" xsi:type="string">footer_menu2</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="footer_img">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_img</argument>
+                </arguments>
+            </block>
+        </referenceContainer> 
+        <referenceBlock name="footer_links" remove="true"/>   
+        <referenceBlock name="copyright" remove="false"/> 
+        <referenceBlock name="form.subscribe" remove="true"/>   
+        <referenceBlock name="report.bugs" remove="true"/>
+
+        <move element="copyright" destination="page.wrapper" after="footer-container"/>
+    </body>
+</page>
